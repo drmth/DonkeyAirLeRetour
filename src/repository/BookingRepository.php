@@ -2,24 +2,18 @@
 
 include dirname(__DIR__).'/model/Booking.php';
 
-class BookingRepository
+class BookingRepository extends AbstractRepository
 {
-    private $pdo;
-
-    public function __construct($pdo) 
-    {
-        $this->pdo = $pdo;
-    }
-
     public function getBookingList($user_id)
     {
-        $query = 'SELECT bookings.*, flights.*, user_infos.lastname, user_infos.firstname, options.* 
+        $query = 'SELECT bookings.*, flights.*, users.lastname, users.firstname, options.* 
             FROM bookings 
             INNER JOIN flights ON flights.id = bookings.flight_id 
-            INNER JOIN user_infos ON user_infos.id = bookings.user_id 
+            INNER JOIN users ON users.id = bookings.user_id 
             INNER JOIN options ON options.id = bookings.option_id 
-            WHERE user_infos.id = ' . $_COOKIE["donkey_air_user_id"];;
+            WHERE users.id = :user_id';
         $statement= $this->pdo->prepare($query);
+        $statement->bindValue(':user_id', $user_id);
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS, Booking::class);
     }

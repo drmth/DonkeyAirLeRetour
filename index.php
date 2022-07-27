@@ -2,24 +2,23 @@
 
 session_start();
 
-global $controller;
+$controller = 'HomeController';
 $action = 'index';
 
 if (!isset($_COOKIE['donkey_air_user_id'])) {
-    global $controller;
-    header('Location:/index.php/login');
+    $controller = 'LoginController';
 }
-if ($_SERVER['REQUEST_URI'] == 'login') {
-    global $controller;
-    $controller = 'LoginController.php';
+if ($_SERVER['REQUEST_URI'] == '/login') {
+    $controller = 'LoginController';
 }
-if ($_SERVER['REQUEST_URI'] == '/index.php') {
-    global $controller;
-    $controller = 'Homecontroller';
-}
-if ($_SERVER['REQUEST_URI'] == '/account') {
-    global $controller;
+if ($_SERVER['REQUEST_URI'] == '/account') {    
     $controller = 'AccountController';
+}
+if ($_SERVER['REQUEST_URI'] == '/covid') {
+    $controller = 'CovidController';
+}
+if ($_SERVER['REQUEST_URI'] == '/logout') {
+    $controller = 'LogoutController';
 }
 function getPDO()
 {

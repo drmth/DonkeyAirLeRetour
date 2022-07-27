@@ -1,17 +1,12 @@
 <?php
 
+include 'AbstractController.php';
+include dirname(__DIR__).'/repository/AbstractRepository.php';
 include dirname(__DIR__).'/repository/UserRepository.php';
 include dirname(__DIR__).'/repository/BookingRepository.php';
 
-class AccountController
+class AccountController extends AbstractController
 {
-    private $pdo;
-
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
-    }
-
     public function index()
     {
         $user_id = $_COOKIE["donkey_air_user_id"];

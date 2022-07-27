@@ -2,14 +2,8 @@
 
 include dirname(__DIR__).'/model/Airport.php';
 
-class AirportRepository {
-    private $pdo;
-
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
-    }
-
+class AirportRepository extends AbstractRepository
+{
     public function getAirportList ()
     {
         $query = 'SELECT * FROM airports';

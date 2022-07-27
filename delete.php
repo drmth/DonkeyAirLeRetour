@@ -9,6 +9,6 @@ if(isset($_GET['deleteid'])){
     $statement->bindValue(':id', $id, \PDO::PARAM_STR);
     $statement->execute();
     if($statement){
-        header('Location:account.php');
+        header('Location:/account');
     }
 }

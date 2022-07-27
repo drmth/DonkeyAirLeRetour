@@ -1,16 +1,11 @@
 <?php
 
+include 'AbstractController.php';
+include dirname(__DIR__).'/repository/AbstractRepository.php';
 include dirname(__DIR__).'/repository/AirportRepository.php';
 
-class HomeController
+class HomeController extends AbstractController
 {
-    private $pdo;
-
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
-    }
-
     public function index()
     {
         $airportsObject = new AirportRepository($this->pdo);

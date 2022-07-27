@@ -26,37 +26,23 @@
                 <th scope="col"><img class="vol" src="public/assets/images/baggage.png"></th>
                 <th scope="col"><img class="vol" src="public/assets/images/couvert.png"></th>
                 <th scope="col"><img class="vol" src="public/assets/images/euro.png"></th>
-                
         </tr>
         </thead>
-        
 <tbody>
 
 <tr>
 <?php
 foreach ($bookingList as $booking) {
-    $booking_id = $booking->id;
-    $reservation_date = $booking->reservation_date;
-    $departure_date = $booking->date;
-    $departure_city = $booking->from;
-    $arrival_city = $booking->to;
-    $schedule = $booking->schedule;
-    $flight_id = $booking->flight_id;
-    $user_id = $booking->user_id;
-    $lastname = $booking->lastname;
-    $firstname = $booking->firstname;
-    $price = $booking->price;
-    $option_luggage = $booking->luggage;
-    $option_meal = $booking->meal; ?>
+    $booking_id = $booking->id;?>
     <tr>
         <div>
-            <td><?php echo $reservation_date; ?></td>
-            <td><?php echo $firstname . '<br>' . $lastname; ?></td>
-            <td><?php echo $departure_city .'<br>'. $arrival_city; ?></td>
-            <td><?php echo $departure_date . '<br>' . $schedule; ?></td>
-            <td><?php echo $option_luggage; ?></td>
-            <td><?php echo $option_meal; ?></td>
-            <td><?php echo $price; ?></td>
+            <td><?php echo $booking->reservation_date; ?></td>
+            <td><?php echo $booking->firstname . '<br>' . $booking->lastname; ?></td>
+            <td><?php echo $booking->departure_airport .'<br>'. $booking->destination_airport; ?></td>
+            <td><?php echo $booking->date . '<br>' . $booking->schedule; ?></td>
+            <td><?php echo $booking->luggage; ?></td>
+            <td><?php echo $booking->meal; ?></td>
+            <td><?php echo $booking->price; ?></td>
             <td><button type="button" class="btn btn-info"><a style="text-decoration: none; color:white" href="copyupdate.php?updateid=<?php echo $booking_id; ?>">MODIFIER</a></button></td>
             <td><button type="button" class="btn btn-danger"><a style="text-decoration: none; color:white" href="delete.php?deleteid=<?php echo $booking_id; ?>">SUPPRIMER</a></button></td>
         </div>

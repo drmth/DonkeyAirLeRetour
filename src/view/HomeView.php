@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <img class="booking" src="public/assets/images/imagebooking.png"></img>
+    <img class="booking" src="/public/assets/images/imagebooking.png"></img>
     <div class="container-md center">
-        <script src="public/assets/js/animation.js"> </script>
+        <script src="/public/assets/js/animation.js"> </script>
         <h1> Réserver un&nbsp;
             <span class="txt-rotate" data-period="2000" data-rotate='[ "billet", " voyage de rêve"]'></span>
         </h1>

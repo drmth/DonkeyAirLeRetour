@@ -20,22 +20,18 @@
             <div class=" collapse navbar-collapse justify-content-end ul-bg" id="btn">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link mx-3  fs-5" aria-current="page" href="booking.php">Recherche Vol</a>
+                        <a class="nav-link mx-3  fs-5" aria-current="page" href="index.php">Recherche Vol</a>
                     </li>
                     <li class="nav-item">
-                        <a href="account.php" class="nav-link mx-3  fs-5">Mon compte</a>
+                        <a href="/account" class="nav-link mx-3  fs-5">Mon compte</a>
                     </li>
                     <li class="nav-item">
-                        <a href="covid.php" class="nav-link mx-3  fs-5">Covid-19</a>
+                        <a href="/covid" class="nav-link mx-3  fs-5">Covid-19</a>
                     </li>
                     <li class="nav-item">
-                        <a href="logout.php" class="nav-link mx-3  fs-5">Déconnexion</a>
+                        <a href="/logout" class="nav-link mx-3  fs-5">Déconnexion</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
-</html>
