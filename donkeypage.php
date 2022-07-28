@@ -43,8 +43,8 @@ body {background-color: #F2F5FA;}
   Un avant goût de vacances ensoleillées avec une <strong>ambiance détendue</strong> :<br/> sièges matelassés, cocktails, ambiance musicale, tout pour vous aider à lâcher prise... </br>
   Les vacances se terminent toujours trop rapidement...alors arrêtez immédiatement de lire ce message<br/> et <strong>courez plus vite à l'aéroport</strong>, nous rejoindre! <strong> Bon voyage !</strong></br>
 </p>
-  <div class="btn">
-  <a href="/home" class="btn btn-danger btn-lg" role="button">Prêt à partir !</a>
+  <div class="button">
+  <a href="/home" class="btn btn-danger btn-lg">Prêt à partir !</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
 </script>

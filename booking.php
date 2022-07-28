@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db_connexion_info.php';
+require_once 'DBHandler.php';
 
 $query = 'SELECT * FROM airports';
 $statement = $pdo->query($query);
@@ -116,8 +116,8 @@ function getQueryResults($query, $pdo)
                     </div>
                 </div>
                 <!--Bouton recherche-->
-                <div class="col-md-12 col-sm-6 text-center">
-                    <input type="submit" value="Recherche" class="btn btn btn-secondary">
+                <div class="button">
+                  <a href="/home" class="btn btn-primary btn-lg" role="button">Lancer la Recherche</a>
                 </div>
             </form>
         </div>

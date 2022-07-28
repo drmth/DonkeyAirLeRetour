@@ -32,7 +32,7 @@ class LoginModel
             $cookie_name = "donkey_air_user_id";
             $cookie_value = $user[0]["id"];
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-            header('Location:header.php');
+            header('Location:index');
         } else {
             echo "<script>alert('Mot de passe ou mail incorrect.');</script>";
             return;

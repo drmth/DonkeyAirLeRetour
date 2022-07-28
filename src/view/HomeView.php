@@ -20,7 +20,7 @@
     <img class="booking" src="/public/assets/images/imagebooking.png"></img>
     <div class="container-md center">
         <script src="/public/assets/js/animation.js"> </script>
-        <h1> Réserver un&nbsp;
+        <h1> Réserver un&thinsp;
             <span class="txt-rotate" data-period="2000" data-rotate='[ "billet", " voyage de rêve"]'></span>
         </h1>
     </div>
@@ -43,9 +43,6 @@
                     <label for="date"> Date de départ </label>
                     <input type="date" name="departure_date" id="date" required>
                     <name="passenger" id="passenger" required>
-                        <label for="return_date"> Date de retour </label>
-                        <input type="date" name="return_date" id="return_date" required>
-                        <name="passenger" id="passenger" required> <br> <br>
                             <label for="nbr_luggage">Ajouter un baggage (optionnel)</label>
                             <select name="nbr_luggage" id="nbr_luggage">
                                 <option selected="selected">0</option>
@@ -60,8 +57,8 @@
                                 <option>2</option>
                                 <option>3</option>
                             </select>
-                            <div class="button-submit">
-                                <input type="submit" value="Lancer la recherche" name="recherche" id="recherche">
+                            <div class="button">
+                                <a href="/home" class="btn btn-primary btn-lg" role="button">Lancer la Recherche</a>
                             </div>
                 </div>
             </form>

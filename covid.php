@@ -12,7 +12,6 @@ include 'src/view/Header.php';
     <link rel="icon" href="Images/icons8-student-64.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-    <link href="css/style.css" rel="stylesheet" >
     <link href="css/styles.css" rel="stylesheet" >
 </head>
 
@@ -23,6 +22,8 @@ include 'src/view/Header.php';
 Vous souhaitez vérifier les conditions à remplir avant votre départ, découvrir nos mesures sanitaires, ou en savoir plus sur nos billets modifiables* ? Consultez nos pages dédiées.</p>
 
 <p>* Sous réserve d'éventuels frais de modification et/ou d'un éventuel réajustement tarifaire. Voir les conditions tarifaires de votre billet. </p>
+
+<img class="logo" src="/public/assets/images/stickers-port-masque-obligatoire-autocollant.jpeg" ></img>
 
 <?php
 include 'src/view/Footer.php';

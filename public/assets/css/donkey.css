@@ -10,22 +10,6 @@
     box-sizing: border-box;
 }
 
-/* NAV BAR */
-.navbar {
-    padding: 20px;
-    display: flex;
-    justify-content: end;
-}
-.nav-link {
-    font-family: 'poppins', sans-serif;
-    color: black;
-    display: block;
-    padding: var;
-    text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-    text-align: center;
-}
-
 /* DONKEYPAGE */
 
 /* BODY */
@@ -134,7 +118,7 @@ p {
   text-align: center;
 }
 /* BOUTON DONKEYPAGE */
-.btn {
+.button {
   display: flex;
   justify-content: center;
   border-radius: 50px;

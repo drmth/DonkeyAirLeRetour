@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-require_once 'db_connexion_info.php';
+require_once 'DBHandler.php';
 
 session_start();
 
@@ -19,12 +19,12 @@ session_start();
             </tr>
         </thead>
 <?php
-$sql = 'SELECT bookings.*, flights.*, user.lastname, user.firstname, options.* 
+$sql = 'SELECT bookings.*, flight.*, users.lastname, users.firstname, options.* 
         FROM bookings 
-        INNER JOIN flights ON flights.id = bookings.flight_id 
-        INNER JOIN users ON user.id = bookings.user_id 
+        INNER JOIN flights ON flight.id = bookings.flight_id 
+        INNER JOIN users ON users.id = bookings.user_id 
         INNER JOIN options ON options.id = bookings.option_id 
-        WHERE user.id = ' . $_COOKIE["donkey_air_user_id"];
+        WHERE users.id = ' . $_COOKIE["donkey_air_user_id"];
 
 $stmt = $pdo->query($sql);
 $bookings = $stmt->fetchAll();
