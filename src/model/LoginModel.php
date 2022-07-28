@@ -1,25 +1,9 @@
 <?php
 
-include 'AbstractController.php';
-include dirname(__DIR__).'/repository/AbstractRepository.php';
-include dirname(__DIR__).'/repository/UserRepository.php';
-
-class LoginController extends AbstractController
+class LoginModel
 {
-<<<<<<< HEAD
-    public function index() 
-    {
-        if (isset($_POST['email']) && isset($_POST['password'])) {
-            $email = $_POST['email'];
-            $user_repo = new UserRepository($this->pdo);
-            if ($user_repo->checkPassword($_POST['password'], $email)) {
-                $user_repo->createCookie($user_repo->getUserId($email));
-                header('Location: /');
-                exit;
-            }
-        }
-        include dirname(__DIR__).'/view/LoginView.php';
-=======
+    function user_login()
+{
     try {
         global $pdo;
         $email = filter_var(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
@@ -55,6 +39,6 @@ class LoginController extends AbstractController
         }
     } catch (PDOException $e) {
         echo "ERROR!!!: " . $e->getMessage();
->>>>>>> b9a0695 (mis a jour de la donkeypage)
     }
+}
 }

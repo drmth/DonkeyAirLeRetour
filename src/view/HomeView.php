@@ -1,6 +1,9 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +16,6 @@
     include dirname(__DIR__) . '/view/Header.php';
     ?>
 </head>
-
 <body>
     <img class="booking" src="/public/assets/images/imagebooking.png"></img>
     <div class="container-md center">

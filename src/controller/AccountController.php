@@ -17,6 +17,11 @@ class AccountController extends AbstractController
         if ($bookingList == false) {
             $bookingList = [];
         }
+
+        include dirname(__DIR__).'/view/Header.php';
+
         include dirname(__DIR__).'/view/AccountView.php';
+
+        include dirname(__DIR__).'/view/Footer.php';
     }
 }

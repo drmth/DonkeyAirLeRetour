@@ -1,0 +1,175 @@
+/* TYPOGRAPHIE GÉNÉRALE*/
+@import url('https://fonts.googleapis.com/css2?');
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@400;700&display=swap');
+
+/* Css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* NAV BAR */
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+}
+.nav-link {
+    font-family: 'poppins', sans-serif;
+    color: black;
+    display: block;
+    padding: var;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    text-align: center;
+}
+
+/* DONKEYPAGE */
+
+/* BODY */
+body{
+    background: #f0f0e1;
+    
+ /* ANIMATION AVION */ 
+  }
+.scene{position:relative;
+  display:block; 
+  margin:0 ; 
+  width:50px;
+  height:50px; 
+}
+.plane,
+.cloud{
+  position:absolute;
+}
+.plane{ 
+  animation-duration: 2s;
+  animation-name: anim-plane;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;	   
+  display:block;
+  margin:0 auto;
+  transform: translateY(80px);
+  left:30%;
+}
+@keyframes anim-plane{ 
+  to{
+    transform:translateY(95px);
+  }    
+}
+/* ANIMATION DES NUAGES */
+@keyframes fade{
+  0%{ opacity: 0;}
+  10%{ opacity: 1;}
+  90%{ opacity:1;}
+  100%{ opacity:0;}
+}
+@keyframes move{  
+  from{ 
+    left:200px; 
+  }
+  to{ 
+    left:0px; 
+  }
+}
+.cloud{ 
+  animation-duration:10s; 
+  animation-name:move, fade;
+  animation-direction: normal;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear; 
+  animation-fill-mode:both;	  
+  display:block;
+  background:url(data:image/svg+xml;base64,PHN2ZyBpZD0iY2xvdWQiIHZpZXdCb3g9IjAgMCA1MiA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI1MnB4IiBoZWlnaHQ9IjQwcHgiPgoJPGRlZnM+CgkJPGZpbHRlciBpZD0iZjEiIHg9Ii0xMDAlIiB5PSItMTAwJSIgd2lkdGg9IjMwMCUiIGhlaWdodD0iMzAwJSI+IAoJCQk8ZmVPZmZzZXQgcmVzdWx0PSJvdXQiIGluPSJTb3VyY2VHcmFwaGljIiBkeD0iMCIgZHk9IjEiLz4KCQkJPGZlQ29sb3JNYXRyaXggcmVzdWx0PSJvdXQiIGluPSJvdXQiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgIDAgMCAwIDAgMCAgMCAwIDAgMCAwICAwIDAgMCAwLjQgMCIvPgoJCQk8ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJvdXQiIGluPSJvdXQiIHN0ZERldmlhdGlvbj0iMiIvPgoJCQk8ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJvdXQiIG1vZGU9Im5vcm1hbCIgcmVzdWx0PSJkcCIvPgoJCTwvZmlsdGVyPgoJPC9kZWZzPiAKCTxwYXRoIGlkPSJmZy1jbG91ZCIgZmlsdGVyPSJ1cmwoI2YxKSIgZD0iTTYuMyAzNS4xQzQuNyAzNC4yLTAuNCAzMi4zIDEuNCAyNSAzLjEgMTguMSA4LjcgMTkuNSA4LjcgMTkuNSA4LjcgMTkuNSAzLjIgMTQuMSAxMC40IDYuOCAxNi45IDAuMiAyMy4xIDQuNiAyMy4xIDQuNiAyMy4xIDQuNiAzMC0xLjcgMzUuMiAyLjQgNDQuNiA5LjcgNDIuOCAyNS4zIDQyLjggMjUuMyA0Mi44IDI1LjMgNDggMjIuNiA0OS44IDI4LjYgNTEgMzIuNyA0NiAzNS44IDQyLjggMzYuNyAzOS43IDM3LjUgOC45IDM2LjYgNi4zIDM1LjFaIiBzdHJva2U9IiNjY2NjY2MiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L3N2Zz4=);
+  height:40px;
+  width:53px;
+  margin:0 auto;  
+}
+.cloud--small{
+  animation-duration:6s; 
+  top:65px;
+  transform: scaleX(0.5) scaleY(0.5); 
+}
+.cloud--medium{ 
+  animation-duration:5s;
+  animation-delay:1s;
+  top:95px;
+  transform: scaleX(0.7) scaleY(0.7); 
+}
+.cloud--large{
+  animation-duration:4.5s;
+  animation-delay:2.5s;
+  top:95px;
+  transform: scaleX(0.8) scaleY(0.8); 
+}
+
+.whoami{
+  padding-top:3em;
+  text-align:center;  
+}
+
+/* TITRE DONKEYPAGE*/
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-block-end: 30px;
+  border-width: 4px;
+}
+/* COULEUR ANIMATION DU TITRE */
+.txt-rotate {
+  color: coral;
+}
+/* PARAGRAPHE*/
+p {
+  margin-top: 50px;
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+}
+/* BOUTON DONKEYPAGE */
+.btn {
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: #F8F9FA;
+  background-color: rgb(0, 0, 0);
+  padding: 0;
+  box-sizing: border-box;
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+/* LIENS SOCIAUX FOOTER */
+.social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5 ease;
+}
+
+/* LIENS SOCIAUX FOOTER HOOVER */
+.social-links a:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
