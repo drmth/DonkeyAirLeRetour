@@ -25,6 +25,9 @@
                         <a class="nav-link mx-3  fs-5" aria-current="page" href="index.php">Recherche Vol</a>
                     </li>
                     <li class="nav-item">
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link mx-3  fs-5">Connexion</a>
+                    </li>
                         <a href="/account" class="nav-link mx-3  fs-5">Mon compte</a>
                     </li>
                     <li class="nav-item">
