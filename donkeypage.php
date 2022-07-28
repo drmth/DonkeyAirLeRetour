@@ -44,7 +44,7 @@ body {background-color: #F2F5FA;}
   Les vacances se terminent toujours trop rapidement...alors arrêtez immédiatement de lire ce message<br/> et <strong>courez plus vite à l'aéroport</strong>, nous rejoindre! <strong> Bon voyage !</strong></br>
 </p>
   <div class="button">
-  <a href="/home" class="btn btn-danger btn-lg">Prêt à partir !</a>
+  <a href="login" class="btn btn-danger btn-lg">Prêt à partir !</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
 </script>

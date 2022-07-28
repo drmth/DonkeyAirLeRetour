@@ -1,26 +1,10 @@
 <?php
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/assets/css/styles.css">
-    <title>Réservations</title>
-    <?php
     include dirname(__DIR__) . '/view/Header.php';
-    ?>
-</head>
-<body>
+?>
     <img class="booking" src="/public/assets/images/imagebooking.png"></img>
     <div class="container-md center">
         <script src="/public/assets/js/animation.js"> </script>
-        <h1> Réserver un&thinsp;
+        <h1> Réserver un&nbsp;
             <span class="txt-rotate" data-period="2000" data-rotate='[ "billet", " voyage de rêve"]'></span>
         </h1>
     </div>
@@ -34,47 +18,65 @@
                             <option value="<?php echo $airport->id; ?>"><?php echo $airport->city . ", " . $airport->country . " " . $airport->IATA; ?></option>
                         <?php } ?>
                     </select>
-                    <label for="arrivee">Ville d'arrivée</label>
-                    <select name="destination_airport" id="destination-select" required>
+                    <label for=“arrivee”>Ville d’arrivée</label>
+                    <select name=“destination_airport” id=“destination-select” required>
                         <?php foreach ($airports as $airport) { ?>
                             <option value="<?php echo $airport->id; ?>"><?php echo $airport->city . ", " . $airport->country . " " . $airport->IATA; ?></option>
                         <?php } ?>
                     </select> <br> <br>
                     <label for="date"> Date de départ </label>
                     <input type="date" name="departure_date" id="date" required>
-                    <name="passenger" id="passenger" required>
-                            <label for="nbr_luggage">Ajouter un baggage (optionnel)</label>
-                            <select name="nbr_luggage" id="nbr_luggage">
-                                <option selected="selected">0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <label for="meal">Ajouter un repas (optionnel)</label>
-                            <select name="meal" id="meal">
-                                <option selected="selected">0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <div class="button">
-                                <a href="/home" class="btn btn-primary btn-lg" role="button">Lancer la Recherche</a>
-                            </div>
+                    <name="passenger" id="passenger" required><br> <br>
+                    <label for="nbr_luggage">Ajouter un baggage (optionnel)</label>
+                        <select name="nbr_luggage" id=“nbr_luggage”>
+                            <option selected=“selected”>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    <label for="meal">Ajouter un repas (optionnel)</label>
+                        <select name="meal" id="meal">
+                            <option selected="selected">0</option>
+                            <option>1</option>
+                        </select>
+                        <div class="button-submit">
+                            <input type="submit" value="Lancer la recherche" name="recherche" id="recherche">
+                        </div>
                 </div>
             </form>
-        </div>
+        </div> <br>  <br>
+        <table class="table">
+        <thead>
+        <tr>
+                <th scope="col"><img class="vol" src="public/assets/images/decollage.png"></th>
+                <th scope="col"><img class="vol" src="public/assets/images/destination.png"></th>
+                <th scope="col"><img class="vol" src="public/assets/images/schedule.png"></th>
+                <th scope="col"><img class="vol" src="public/assets/images/number.png"></th>
+                <th scope="col"><img class="vol" src="public/assets/images/duration.png"></th>
+                <th scope="col"><img class="vol" src="public/assets/images/euro.png"></th>
+        </tr>
+        </thead>
+<tbody>
+<tr>
+<?php
+foreach ($flights as $flight) {
+    $flight_id = $flight->id;?>
+    <tr>
         <div>
-            <?php foreach ($flights as $flight) {
-                var_dump($flight);
-            } ?>
+            <td><?php echo $flight->departure_airport; ?></td>
+            <td><?php echo $flight->destination_airport; ?></td>
+            <td><?php echo $flight->date . '<br>' . $flight->schedule; ?></td>
+            <td><?php echo $flight->flight_number; ?></td>
+            <td><?php echo $flight->flight_duration; ?></td>
+            <td><?php echo $flight->price; ?></td>
+            <td><button type="button" class="btn btn-info"><a style="text-decoration: none; color:white" href="copyupdate.php?updateid=<?php echo $flight_id; ?>">Réserver</a></button></td>
         </div>
-        <div id='root'></div>
-    </div>
+    </tr>
+<?php
+} ?>
+</table>
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
 <?php
 include dirname(__DIR__) . '/view/Footer.php';
 ?>
-
-</html>
