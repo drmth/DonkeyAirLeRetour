@@ -24,19 +24,8 @@
     </div>
     <div class="search-form">
         <div class="container">
-            <form action="booking.php" method="post">
+            <form action="index" method="post">
                 <div class="form-group">
-                    <label for="aller_retour">Voyage</label>
-                    <select name="aller_retour" id="aller_retour">
-                        <option selected="selected">Aller-Retour</option>
-                        <option selected="selected">Aller simple</option>
-                    </select>
-                    <label for="nbr_passager">Nombre de passager(s)</label>
-                    <select name="nbr_passager" id="nbr_passager">
-                        <option selected="selected">1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select> <br> <br>
                     <label for="provenance">Ville de départ</label>
                     <select name="departure_airport" id="departure-select" required>
                         <?php foreach ($airports as $airport) { ?>
@@ -75,6 +64,12 @@
                 </div>
             </form>
         </div>
+        <div>
+            <?php foreach ($flights as $flight) {
+                var_dump($flight);
+            } ?>
+        </div>
+        <div id='root'></div>
     </div>
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
