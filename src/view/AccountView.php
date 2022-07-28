@@ -33,20 +33,20 @@
 <tr>
 <?php
 foreach ($bookingList as $booking) {
-    $booking_id = $booking->id;?>
-    <tr>
-        <div>
-            <td><?php echo $booking->reservation_date; ?></td>
-            <td><?php echo $booking->firstname . '<br>' . $booking->lastname; ?></td>
-            <td><?php echo $booking->departure_airport .'<br>'. $booking->destination_airport; ?></td>
-            <td><?php echo $booking->date . '<br>' . $booking->schedule; ?></td>
-            <td><?php echo $booking->luggage; ?></td>
-            <td><?php echo $booking->meal; ?></td>
-            <td><?php echo $booking->price; ?></td>
-            <td><button type="button" class="btn btn-info"><a style="text-decoration: none; color:white" href="copyupdate.php?updateid=<?php echo $booking_id; ?>">MODIFIER</a></button></td>
-            <td><button type="button" class="btn btn-danger"><a style="text-decoration: none; color:white" href="delete.php?deleteid=<?php echo $booking_id; ?>">SUPPRIMER</a></button></td>
-        </div>
-    </tr>
+    $bookingId = $booking->booking_id;?>
+        <tr>
+            <div>
+                    <td><?php echo $booking->reservation_date; ?></td>
+                    <td><?php echo $booking->firstname . '<br>' . $booking->lastname; ?></td>
+                    <td><?php echo $booking->departure_airport .'<br>'. $booking->destination_airport; ?></td>
+                    <td><?php echo $booking->date . '<br>' . $booking->schedule; ?></td>
+                    <td><?php echo $booking->luggage; ?></td>
+                    <td><?php echo $booking->meal; ?></td>
+                    <td><?php echo $booking->price; ?></td>
+                    <td><button type="button" class="btn btn-info"><a style="text-decoration: none; color:white" href="account/update/<?php echo $bookingId; ?>">MODIFIER</a></button></td>
+                    <td><button type="button" class="btn btn-danger"><a style="text-decoration: none; color:white" href="account/delete/<?php echo $bookingId; ?>">SUPPRIMER</a></button></td>
+            </div>
+        </tr>
 <?php
 } ?>
 </table>

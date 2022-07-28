@@ -9,11 +9,11 @@ class AccountController extends AbstractController
 {
     public function index()
     {
-        $user_id = $_COOKIE["donkey_air_user_id"];
+        $userId = $_COOKIE["donkey_air_user_id"];
         $userObject = new UserRepository($this->pdo);
-        $user = $userObject->getUserInfo($user_id);
+        $user = $userObject->getUserInfo($userId);
         $bookingObject = new BookingRepository($this->pdo);
-        $bookingList = $bookingObject->getBookingList($user_id);
+        $bookingList = $bookingObject->getBookingList($userId);
         if ($bookingList == false) {
             $bookingList = [];
         }
