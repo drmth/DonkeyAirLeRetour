@@ -12,7 +12,7 @@ if (!isset($_COOKIE['donkey_air_user_id'])) {
 if ($_SERVER['REQUEST_URI'] == '/login') {
     $controller = 'LoginController';
 }
-if ($_SERVER['REQUEST_URI'] == '/account') {    
+if ($_SERVER['REQUEST_URI'] == '/account') {  
     $controller = 'AccountController';
 }
 if ($_SERVER['REQUEST_URI'] == '/covid') {
@@ -24,6 +24,16 @@ if ($_SERVER['REQUEST_URI'] == '/logout') {
 if (str_contains($_SERVER['REQUEST_URI'],'/account/delete')) {
     $action = 'delete';
     $id = explode('/', $_SERVER['REQUEST_URI'])[3];
+    $controller = 'BookingController';
+}
+if (str_contains($_SERVER['REQUEST_URI'],'/account/update')) {
+    $action = 'update';
+    $id = explode('/', $_SERVER['REQUEST_URI'])[3];
+    $controller = 'BookingController';
+}
+if (str_contains($_SERVER['REQUEST_URI'],'/add')) {
+    $action = 'add';
+    $id = explode('/', $_SERVER['REQUEST_URI'])[2];
     $controller = 'BookingController';
 }
 function getPDO()
